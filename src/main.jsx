@@ -6,12 +6,14 @@ import App from './App.jsx'
 import Error from './routes/Error/Error.jsx'
 import Produtos from './routes/Produtos/Produtos.jsx'
 import Login from './routes/Login/Login.jsx'
+import Home from './routes/Home/Home.jsx'
 
 const router=createBrowserRouter([{
   path:'/',element:<App/>,
   errorElement:<Error/>,
 
   children:[
+    {path:'/',element:<Home/>},
     {path:'/produtos',element:<Produtos/>},
     {path:'/login',element:<Login/>},
   ]
